@@ -1,0 +1,16 @@
+<resources>
+    <string name="app_name">Ecommerce App</string>
+
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+
+    <string name="action_settings">Settings</string>
+
+    <string-array name="category_array">
+        <item>Mobile and Tablets</item>
+        <item>TV and Audio</item>
+        <item>Computer and peripherals</item>
+        <item>Fitness</item>
+        <item>Game and Entertainment</item>
+    </string-array>
+</resources>
