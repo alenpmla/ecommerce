@@ -13,4 +13,22 @@
         <item>Fitness</item>
         <item>Game and Entertainment</item>
     </string-array>
+
+    <string-array name="sub_category_array">
+        <item>Mobiles</item>
+        <item>Tabltets</item>
+        <item>Accessories</item>
+    </string-array>
+
+    <string-array name="sub_category_brands">
+        <item>Micromax</item>
+        <item>Moto</item>
+        <item>Asus</item>
+        <item>Micromax</item>
+        <item>Moto</item>
+        <item>Asus</item>
+        <item>Micromax</item>
+        <item>Moto</item>
+
+    </string-array>
 </resources>

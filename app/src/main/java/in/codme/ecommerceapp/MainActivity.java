@@ -1,6 +1,8 @@
 package in.codme.ecommerceapp;
 
 import android.app.ActionBar;
+import android.app.FragmentManager;
+import android.app.FragmentTransaction;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
@@ -40,7 +42,7 @@ public class MainActivity extends AppCompatActivity
         setContentView(R.layout.activity_main);
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
-ImageView search_button=(ImageView)findViewById(R.id.search_button);
+        ImageView search_button=(ImageView)findViewById(R.id.search_button);
 
         search_button.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -48,9 +50,7 @@ ImageView search_button=(ImageView)findViewById(R.id.search_button);
                 Toast.makeText(getApplicationContext(),"search clicked",Toast.LENGTH_SHORT).show();
             }
         });
-        mPager = (ViewPager) findViewById(R.id.pager);
-        mPagerAdapter = new ScreenSlidePagerAdapter(getSupportFragmentManager());
-        mPager.setAdapter(mPagerAdapter);
+
 
 
 
@@ -62,11 +62,16 @@ ImageView search_button=(ImageView)findViewById(R.id.search_button);
 
         NavigationView navigationView = (NavigationView) findViewById(R.id.nav_view);
         navigationView.setNavigationItemSelectedListener(this);
-        ListView listView=(ListView)findViewById(R.id.listview) ;
-        ArrayAdapter<CharSequence> aa = ArrayAdapter.createFromResource(this, R.array.category_array, android.R.layout.simple_list_item_1);
-        listView.setAdapter(aa);
-        setListViewHeightBasedOnChildren(listView);
-        action_bar();
+
+
+
+        android.support.v4.app.FragmentManager fragmentManager = getSupportFragmentManager();
+        android.support.v4.app.FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
+
+        HomeFragment fragment = new HomeFragment();
+        fragmentTransaction.add(R.id.container, fragment);
+        fragmentTransaction.commit();
+
     }
     public static void setListViewHeightBasedOnChildren(ListView listView) {
         ListAdapter listAdapter = listView.getAdapter();
@@ -87,14 +92,6 @@ ImageView search_button=(ImageView)findViewById(R.id.search_button);
         ViewGroup.LayoutParams params = listView.getLayoutParams();
         params.height = totalHeight + (listView.getDividerHeight() * (listAdapter.getCount() - 1));
         listView.setLayoutParams(params);
-    }
-    private void action_bar() {
-
-
-       // View actionBarView = getActionBar().getCustomView();
-        //EditText editText = (EditText) actionBarView.findViewById(R.id.);
-
-
     }
 
     @Override

@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:id="@+id/toplay"
+        android:layout_alignParentTop="true"
+        android:gravity="center"
+        android:background="#e4e4e4"
+        android:weightSum="4"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+        <TextView
+            android:layout_weight="1"
+            android:padding="10dp"
+            android:background="#e4e4e4"
+            android:textSize="14dp"
+            android:textStyle="bold"
+            android:text="Selected Sub Category Name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+        <LinearLayout
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:layout_weight="3"
+            android:weightSum="2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <ImageView
+                android:clickable="true"
+                android:foreground="?android:attr/selectableItemBackground"
+                android:layout_gravity="center"
+                android:alpha=".8"
+                android:layout_weight="1"
+                android:src="@drawable/ic_list_black_24dp"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" />
+            <ImageView
+                android:clickable="true"
+                android:foreground="?android:attr/selectableItemBackground"
+                android:layout_gravity="center"
+                android:alpha=".8"
+                android:layout_weight="1"
+                android:src="@drawable/ic_grid_on_black_24dp"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" />
+        </LinearLayout>
+    </LinearLayout>
+    <ScrollView
+        android:layout_below="@+id/toplay"
+        android:id="@+id/container"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <LinearLayout
+
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <LinearLayout
+                android:layout_marginTop="6dp"
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+
+                <ListView
+                    android:divider="@null"
+                    android:id="@+id/listview"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"/>
+            </LinearLayout>
+        </LinearLayout>
+
+</ScrollView>
+    <LinearLayout
+        android:id="@+id/bottomlay"
+        android:background="#e4e4e4"
+        android:padding="5dp"
+        android:orientation="horizontal"
+        android:gravity="center"
+        android:weightSum="2"
+        android:layout_alignParentBottom="true"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:clickable="true"
+            android:foreground="?android:attr/selectableItemBackground"
+            android:background="#e4e4e4"
+            android:layout_weight="1"
+android:orientation="vertical"
+            android:gravity="center"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+        <TextView
+            android:gravity="center"
+            android:text="Sort By"
+             android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+            <TextView
+                android:gravity="center"
+                android:text="Popularity"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+        </LinearLayout>
+        <View
+
+            android:background="@android:color/white"
+            android:layout_width="1dp"
+            android:layout_height="match_parent"/>
+
+            <LinearLayout
+                android:clickable="true"
+                android:foreground="?android:attr/selectableItemBackground"
+                android:background="#e4e4e4"
+                android:gravity="center"
+                android:layout_weight="1"
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <TextView
+                    android:gravity="center"
+                    android:text="Filter By"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+                <TextView
+                    android:gravity="center"
+                    android:text="No filter applied"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+            </LinearLayout>
+
+    </LinearLayout>
+</RelativeLayout>
